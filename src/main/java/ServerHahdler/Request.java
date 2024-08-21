@@ -3,12 +3,12 @@ package ServerHahdler;
 import java.util.Map;
 
 public class Request {
-    private final String method;//для хранения метода запроса
-    private final String path;//для хранения пути запроса
-    private final byte[] body;//для хранения тела запроса
-    private final Map<String, String> queryParams;//для хранения параметров запроса
+    private final String method;//Г¤Г«Гї ГµГ°Г Г­ГҐГ­ГЁГї Г¬ГҐГІГ®Г¤Г  Г§Г ГЇГ°Г®Г±Г 
+    private final String path;//Г¤Г«Гї ГµГ°Г Г­ГҐГ­ГЁГї ГЇГіГІГЁ Г§Г ГЇГ°Г®Г±Г 
+    private final byte[] body;//Г¤Г«Гї ГµГ°Г Г­ГҐГ­ГЁГї ГІГҐГ«Г  Г§Г ГЇГ°Г®Г±Г 
+    private final Map<String, String> queryParams;//Г¤Г«Гї ГµГ°Г Г­ГҐГ­ГЁГї ГЇГ Г°Г Г¬ГҐГІГ°Г®Гў Г§Г ГЇГ°Г®Г±Г 
 
-    //конструктор с параметрами
+    //ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г° Г± ГЇГ Г°Г Г¬ГҐГІГ°Г Г¬ГЁ
     public Request(String method, String path, Map<String, String> queryParams, byte[] body) {
         this.method = method;
         this.path = path;
@@ -16,27 +16,27 @@ public class Request {
         this.body = body;
     }
 
-    //возвращает метод запроса
+    //ГўГ®Г§ГўГ°Г Г№Г ГҐГІ Г¬ГҐГІГ®Г¤ Г§Г ГЇГ°Г®Г±Г 
     public String getMethod() {
         return method;
     }
 
-    //возвращает путь запроса
+    //ГўГ®Г§ГўГ°Г Г№Г ГҐГІ ГЇГіГІГј Г§Г ГЇГ°Г®Г±Г 
     public String getPath() {
         return path;
     }
 
-    //возвращает параметры запроса
+    //ГўГ®Г§ГўГ°Г Г№Г ГҐГІ ГЇГ Г°Г Г¬ГҐГІГ°Г» Г§Г ГЇГ°Г®Г±Г 
     public Map<String, String> getQueryParams() {
         return queryParams;
     }
 
-    //возвращает параметры запроса по имени
+    //ГўГ®Г§ГўГ°Г Г№Г ГҐГІ ГЇГ Г°Г Г¬ГҐГІГ°Г» Г§Г ГЇГ°Г®Г±Г  ГЇГ® ГЁГ¬ГҐГ­ГЁ
     public String getQueryParam(String name) {
         return queryParams.get(name);
     }
 
-    //возвращает тело запроса
+    //ГўГ®Г§ГўГ°Г Г№Г ГҐГІ ГІГҐГ«Г® Г§Г ГЇГ°Г®Г±Г 
     public byte[] getBody() {
         return body;
     }
